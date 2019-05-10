@@ -115,8 +115,7 @@ export const Chart = () => {
   return (
     <>
       <div style={{ fontSize: 20, marginBottom: 30 }}>
-        {"Highlighted Category: "}
-        {highlight}
+        {`Highlighted Category: ${highlight}`}
       </div>
       <ChartRenderer spec={spec} handleClick={handleClick} />
     </>

@@ -1,12 +1,9 @@
 import * as React from "react";
-import { ChartRenderer } from "./ChartRenderer3";
+import { ChartRenderer } from "./ChartRenderer";
 
-export const Bars = () => {
+export const Chart = () => {
   const [highlight, updateHighlight] = React.useState("A");
 
-  // these specs are copy/pasted from the Bar Chart example
-  // from the Vega Documentation
-  // https://vega.github.io/vega/examples/bar-chart/
   const spec = {
     $schema: "https://vega.github.io/schema/vega/v5.json",
     width: 400,
@@ -38,6 +35,8 @@ export const Bars = () => {
           { events: "rect:mouseout", update: "{}" }
         ]
       },
+      // Here is the new signal from which
+      // we retrieve the value
       {
         name: "clickOnCategory",
         on: [{ events: "rect:click", update: "datum" }]

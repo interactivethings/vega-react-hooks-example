@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ChartRenderer } from "./ChartRenderer3";
+import { ChartRenderer } from "./ChartRenderer";
 
-export const Bars = () => {
+export const Chart = () => {
   const [highlight, updateHighlight] = React.useState("A");
 
   // these specs are copy/pasted from the Bar Chart example
@@ -106,12 +106,5 @@ export const Bars = () => {
     ]
   };
 
-  const handleClick = (...args) => updateHighlight(args[1].category);
-  return (
-    <ChartRenderer
-      spec={spec}
-      highlight={highlight}
-      handleClick={handleClick}
-    />
-  );
+  return <ChartRenderer spec={spec} />;
 };

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { ChartRenderer } from "./ChartRenderer2";
+import { ChartRenderer } from "./ChartRenderer";
 
-export const Bars = () => {
-  // these specs are copy/pasted from the Bar Chart example
+export const Chart = () => {
+  // These specs were copy/pasted from the Bar Chart example
   // from the Vega Documentation
   // https://vega.github.io/vega/examples/bar-chart/
   const spec = {
@@ -97,5 +97,7 @@ export const Bars = () => {
       }
     ]
   };
+
+  // Here we call the ChartRenderer component with our custom specs.
   return <ChartRenderer spec={spec} />;
 };

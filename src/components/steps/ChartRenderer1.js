@@ -1,11 +1,11 @@
 import * as React from "react";
 
 export const ChartRenderer = () => {
-  // useRef() is a hook that provide a way to manipulate
-  // a DOM element imperatively.
+  // useRef() is a hook that provides a way to manipulate
+  // a DOM node imperatively.
   const chartContainer = React.useRef();
 
   // This component only returns the div
-  // that will be used as the chart container.
+  // that will later be used as the chart container.
   return <div ref={chartContainer} />;
 };
