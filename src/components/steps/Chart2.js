@@ -83,7 +83,7 @@ export const Bars = () => {
             ]
           },
           hover: {
-            fill: { value: "red" }
+            fill: { value: "lightblue" }
           }
         }
       },

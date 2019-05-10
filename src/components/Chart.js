@@ -87,7 +87,7 @@ export const Chart = () => {
             ]
           },
           hover: {
-            fill: { value: "red" }
+            fill: { value: "lightblue" }
           }
         }
       },
@@ -114,8 +114,10 @@ export const Chart = () => {
 
   return (
     <>
-      {"Highlighted Category: "}
-      {highlight}
+      <div style={{ fontSize: 20, marginBottom: 30 }}>
+        {"Highlighted Category: "}
+        {highlight}
+      </div>
       <ChartRenderer spec={spec} handleClick={handleClick} />
     </>
   );
