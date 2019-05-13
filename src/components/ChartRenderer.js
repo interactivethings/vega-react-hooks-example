@@ -2,7 +2,7 @@ import * as React from "react";
 import * as vega from "vega";
 
 export const ChartRenderer = ({ spec, handleClick }) => {
-  const chartContainer = React.useRef();
+  const chartContainer = React.useRef(null);
   React.useEffect(() => {
     const createView = async () => {
       try {
@@ -16,7 +16,7 @@ export const ChartRenderer = ({ spec, handleClick }) => {
         const awaitedView = await view.runAsync();
         awaitedView.addSignalListener("clickOnCategory", handleClick);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
 
