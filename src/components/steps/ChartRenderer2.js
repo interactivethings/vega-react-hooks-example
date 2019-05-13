@@ -5,7 +5,7 @@ import * as vega from "vega";
 
 // Note the new props "specs"
 export const ChartRenderer = ({ spec }) => {
-  const chartContainer = React.useRef();
+  const chartContainer = React.useRef(null);
 
   // This is the hook that will be called after
   // the first rendering, and everytime "spec" updates.
@@ -33,7 +33,7 @@ export const ChartRenderer = ({ spec }) => {
           // The is where we actually render the View within our container.
           await view.runAsync();
         } catch (error) {
-          console.log(error);
+          console.error(error);
         }
       };
 

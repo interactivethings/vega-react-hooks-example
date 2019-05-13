@@ -3,7 +3,7 @@ import * as vega from "vega";
 
 // Note the added prop "handleClick"
 export const Chart = ({ spec, handleClick }) => {
-  const chartContainer = React.useRef();
+  const chartContainer = React.useRef(null);
   React.useEffect(
     () => {
       const createView = async () => {
@@ -22,7 +22,7 @@ export const Chart = ({ spec, handleClick }) => {
           // in Vega's chart spec.
           awaitedView.addSignalListener("clickOnCategory", handleClick);
         } catch (error) {
-          console.log(error);
+          console.error(error);
         }
       };
 
